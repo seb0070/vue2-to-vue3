@@ -51,22 +51,19 @@
  -->
 </template>
 
-<script>
-export default {
-  name: "E04Directives",
-  data() {
-    return {
-      isVisible: true,
-      items: [
-        { id: 1, name: "Item 1" },
-        { id: 2, name: "Item 2" },
-        { id: 3, name: "Item 3" },
-        { id: 4, name: "Item 4" },
-      ],
-      count: 0,
-    };
-  }
-};
+<script setup>
+import { ref } from 'vue'
+// (선택) 컴포넌트 이름 필요 시 활성화
+// defineOptions({ name: 'E04Directives' })
+
+const isVisible = ref(true)
+const items = ref([
+  { id: 1, name: 'Item 1' },
+  { id: 2, name: 'Item 2' },
+  { id: 3, name: 'Item 3' },
+  { id: 4, name: 'Item 4' },
+])
+const count = ref(0)
 </script>
 
 <style scoped>
@@ -76,6 +73,5 @@ export default {
   margin: 0 auto;
   padding: 20px;
   grid-gap: 20px;
-
 }
 </style>

@@ -6,28 +6,32 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
-
 export default {
   name: 'E12RefComponent',
-  setup() {
-    const inputField = ref(null); // DOM 요소에 대한 ref 선언
+}
+</script>
 
-    const focusInput = () => {
-      inputField.value.focus(); // ref를 통해 DOM 요소에 접근
-    };
+<script setup>
+import { ref, onMounted, onBeforeMount, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted } from 'vue'
 
-    onMounted(() => {
-      console.log(inputField); // 컴포넌트가 마운트된 후, inputField에 접근 가능
-      if(inputField.value) {
-        inputField.value.focus();
-      }
-    });
+const inputField = ref(null)
 
-    return {
-      inputField,
-      focusInput
-    };
+const focusInput = () => {
+  inputField.value?.focus()
+}
+
+onMounted(() => {
+  console.log(inputField)
+  if (inputField.value) {
+    inputField.value.focus()
   }
-};
+})
+
+// 라이프사이클 훅
+onBeforeMount(() => console.log('inputField beforeMount'))
+onMounted(() => console.log('inputField mounted'))
+onBeforeUpdate(() => console.log('inputField beforeUpdate'))
+onUpdated(() => console.log('inputField updated'))
+onBeforeUnmount(() => console.log('inputField beforeUnmount'))
+onUnmounted(() => console.log('inputField unmounted'))
 </script>

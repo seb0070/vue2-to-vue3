@@ -1,15 +1,18 @@
 <template>
-  <E01Instance />
+  <E05ParentComponent />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import E01Instance from "@/components/example1/E-01-instance.vue";
+import E05ParentComponent from "@/components/example3/ParentComponent.vue";
+
 
 export default defineComponent({
   name: 'App',
   components: {
-    E01Instance
+    E05ParentComponent
+
+
   }
 });
 </script>
