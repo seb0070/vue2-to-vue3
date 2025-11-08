@@ -7,6 +7,7 @@
 기존 Options API 중심의 코드를 Composition API 구조로 재작성하며,  
 Vue3의 주요 개념(`ref`, `reactive`, `computed`, `watch`, `props`, `emit`, `provide/inject`)을 직접 적용했습니다.
 
+
 ## 🧩 주요 변경 요약
 
 - 전체 예제(E01~E12)를 **Vue 2 문법에서 Vue 3 문법으로 변환**
@@ -22,7 +23,8 @@ Vue3의 주요 개념(`ref`, `reactive`, `computed`, `watch`, `props`, `emit`, `
   (`env: { 'vue/setup-compiler-macros': true }` 추가)
 - 전체 코드 포맷 통일 및 **Composition API 스타일로 리팩터링 완료**
 
-🖼️ 실행 결과
+
+## 🖼️ 실행 결과
 
 | 예제 | 설명 | 스크린샷 |
 |:----:|:------|:----------|
@@ -38,6 +40,7 @@ Vue3의 주요 개념(`ref`, `reactive`, `computed`, `watch`, `props`, `emit`, `
 | E10 | ref() 기본 예제 | ![E10](./images/E10.png) |
 | E11 | reactive() 객체 예제 | ![E11](./images/E11.png) |
 | E12 | DOM 참조 (template ref) 예제 | ![E12](./images/E12.png) |
+
 
 ## 💬 정리
 
